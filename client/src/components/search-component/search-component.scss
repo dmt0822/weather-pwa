@@ -1,0 +1,51 @@
+@import '../../variables';
+
+.location-search {
+    width: 100%;
+
+    form {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.search-input {
+    padding: 1em;
+    flex-grow: 1;
+    font-size: 1.2em;
+    min-width: 0;
+}
+
+.search-btn {
+    background-color: #ffffff;
+    border: $border-gray;
+    font-size: 1.2em;
+    color: $font-gray;
+}
+
+.search-btn > i {
+    padding: 0 1em;
+}
+
+.location-list {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+}
+
+.location-btn {
+    display: block;
+    background-color: inherit;
+    border-style: solid;
+    border-color: $color-gray;
+    border-width: 0 0 1px 0;
+    padding: 1em;
+    width: 100%;
+    text-align: left;
+}
+
+.location-btn:hover {
+    cursor: pointer;
+}

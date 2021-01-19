@@ -1,0 +1,4 @@
+docker_env
+.gitignore
+.vscode
+node_modules

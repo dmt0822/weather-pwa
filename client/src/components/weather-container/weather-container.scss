@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.loading-text {
+    font-size: 1.2em;
+    color: $font-gray;
+}

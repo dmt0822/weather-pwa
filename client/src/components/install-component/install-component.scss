@@ -1,0 +1,13 @@
+.install-container {
+    display: flex;
+}
+
+.install-container div {
+    flex-grow: 1;
+    padding: 1em;
+}
+
+.install-container button {
+    flex-grow: 0;
+    margin: 0.5em 1em;
+}

@@ -1,0 +1,17 @@
+.hourly-data:first-of-type {
+    min-width: 22%;
+    flex-basis: 22%;
+}
+
+.hourly-data:nth-child(2) {
+    width: 15%;
+    flex-basis: 15%;
+}
+
+.hourly-data {
+    width: 21%;
+    flex-basis: 21%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    text-align: left;
+}

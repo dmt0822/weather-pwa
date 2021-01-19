@@ -1,0 +1,6 @@
+node_modules
+dist
+build
+docker_env
+*.cert
+*.key
