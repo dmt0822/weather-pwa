@@ -19,7 +19,14 @@ const corsConfig = {
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
+app.use((req, res, next) => {
+    const { protocol, hostname, url } = req;
+    if (envConfig.enableHttps === "true" && protocol === 'http') {
+        res.status(301).redirect(`https://${hostname}${url}`);
+        return
+    }    
+    next();
+});
 app.use((req, res, next) => {
     if(!req.logger) {
         req.logger = logger;
