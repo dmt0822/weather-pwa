@@ -20,8 +20,9 @@ const corsConfig = {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use((req, res, next) => {
-    const { protocol, hostname, url } = req;
-    if (envConfig.enableHttps === "true" && protocol === 'http') {
+    const { hostname, url } = req;
+    const protocol = req.headers['x-forwarded-proto'];
+    if (envConfig.enableHttps === "true" && protocol !== 'https') {
         res.status(301).redirect(`https://${hostname}${url}`);
         return
     }    
